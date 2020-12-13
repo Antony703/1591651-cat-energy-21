@@ -1,3 +1,32 @@
 .page-header {
+  outline: 3px solid tomato;
+  outline-offset: -3px;
   background-color: @basic_white;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    // flex-direction: row;
+
+  }
+}
+
+.page-header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-header__nav-toggle {
+  margin-right: 3px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
