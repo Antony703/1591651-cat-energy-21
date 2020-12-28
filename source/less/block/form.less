@@ -1,6 +1,15 @@
 .form fieldset {
+  outline: 3px solid blueviolet;
+
   border: none;
   padding: 0;
+}
+.form__container {
+  @media (min-width:@desktop-width) {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+  }
 }
 
 .form__label {

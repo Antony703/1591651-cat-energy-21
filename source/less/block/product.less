@@ -1,9 +1,30 @@
 .product {
+  position: relative;
   background-color: fade(@basic_green, 85%);
   color: @basic_white;
   font-weight: normal;
-}
 
+  @media (min-width:@tablet-width) {
+    background-color: @basic_white;
+    color: @basic_black;
+  }
+
+}
+@media (min-width: @desktop-width) {
+  .product {
+    height: 696px;
+  }
+  .product::after {
+    content: "";
+    position: absolute;
+    top:0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    z-index: 0;
+    background-color: fade(@basic_green,85%);
+  }
+}
 // .product__tagline {
 //   font-size: 36px;
 //   line-height: 36px;

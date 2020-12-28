@@ -1,6 +1,14 @@
 .button {
+  display: inline-block;
+  // width: 100%;
   background-color: @basic_green;
   color: @basic_white;
   text-transform: uppercase;
   border: none;
+}
+
+@media (max-width: @tablet-width) {
+  .button {
+    width: 100%;
+  }
 }
