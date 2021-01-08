@@ -21,7 +21,8 @@
 .catalog__item-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 40px;
+  grid-template-rows: 1fr 1fr min-content;
+  width: 100%;
   @media (min-width:@tablet-width) {
     display: flex;
     flex-direction: column;
@@ -43,6 +44,10 @@
 }
 .catalog__button {
   grid-column: 1/ span 2;
+}
+.catalog__show {
+  width: 100%;
+  text-align: center;
 }
 .catalog__show-name {
   color: #111111;
