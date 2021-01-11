@@ -1,12 +1,20 @@
+.form {
+  @media (min-width:@tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
 .form fieldset {
-  outline: 3px solid blueviolet;
+  // outline: 3px solid blueviolet;
 
   border: none;
   padding: 0;
 }
+
 .form__container {
   @media (min-width:@desktop-width) {
-    display:grid;
+    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 100px;
   }
@@ -28,6 +36,18 @@
 .form__input {
   text-transform: uppercase;
   color: @special_dark-grey;
+
+  &--text,
+  &--number,
+  &--email,
+  &--tel {
+    flex-grow: 1;
+  }
+}
+
+.form__input-wrapper {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .form__legend {
@@ -36,6 +56,7 @@
 }
 
 .form__comment-text {
+  width: 100%;
   color: @special_dark-grey;
   resize: none;
 }
@@ -43,4 +64,32 @@
 .form__required-fields {
   font-size: 14px;
   line-height: 16px;
+}
+
+.form__extra-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width:@tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 61px;
+  }
+
+  @media (min-width:@desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 61px;
+  }
+}
+
+@media (min-width:@desktop-width) {
+  .form__submit {
+    grid-column: 1/ span 2;
+  }
+
+
+  .form__required-fields {
+    grid-column: span 2;
+  }
 }

@@ -5,7 +5,7 @@
   font-weight: normal;
 
   @media (min-width:@tablet-width) {
-    background-color: @basic_white;
+    background-color: transparent;
     color: @basic_black;
   }
 
@@ -17,11 +17,11 @@
   .product::after {
     content: "";
     position: absolute;
-    top:0;
+    top:-90px;
     right: 0;
     height: 100%;
     width: 50%;
-    z-index: 0;
+    z-index: -1;
     background-color: fade(@basic_green,85%);
   }
 }

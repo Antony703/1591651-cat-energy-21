@@ -10,8 +10,8 @@
 
 .page__body-container {
   min-width: @mobile-width;
-  // max-width: @desktop-width;
-  // margin: 0 auto;
+//   max-width: @desktop-width;
+//   margin: 0 auto;
 }
 
 // .page__form-header {
@@ -24,6 +24,10 @@
   font-size: 14px;
   line-height: 18px;
   font-weight: normal;
+  @media (min-width:@tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 // .page__catalog-header {
