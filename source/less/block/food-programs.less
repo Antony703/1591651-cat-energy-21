@@ -1,7 +1,10 @@
 // .food-programs {
 // }
-// .food-programs__wrapper {
-// }
+.food-programs__wrapper {
+  @media (min-width:@desktop-width) {
+    margin-top: 50px;
+  }
+}
 
 .food-programs__list {
   list-style: none;
@@ -12,6 +15,12 @@
 .food-programs__list-wrapper {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    ;
+  }
 }
 
 .food-programs__item {
@@ -30,6 +39,18 @@
     padding-bottom: 33px;
     padding-left: 53px;
   }
+
+  @media (min-width:@desktop-width) {
+    min-height: 374px;
+    max-width: 570px;
+    padding-top: 45px;
+  }
+}
+
+.food-programs__item--pro p {
+  @media (min-width:@tablet-width) {
+    padding-right: 40px;
+  }
 }
 
 .food-programs__item-wrapper {
@@ -45,19 +66,31 @@
   border-radius: 50%;
   background-color: @basic_green;
   // margin-right: 20px;
+
+  @media (min-width: @desktop-width) {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .food-programs__title {
   margin: 0;
+  margin-left: 20px;
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
+    margin-left: 0;
     font-size: 36px;
     line-height: 36px;
-    margin-top: 25px;
+    margin-top: 5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    margin-left: 61px;
   }
 }
 
@@ -74,10 +107,16 @@
 
   @media (min-width:@tablet-width) {
     border: none;
-    padding-top: 26px;
+    min-height: 96px;
+    padding-top: 5px;
     padding-bottom: 20px;
     font-size: 16px;
     line-height: 24px;
+  }
+  @media (min-width:@desktop-width) {
+    min-height: 72px;
+    padding-top: 33px;
+    padding-bottom: 0px;
   }
 }
 
@@ -112,21 +151,27 @@
   @media (min-width:@tablet-width) {
     width: 165px;
     margin-top: 30px;
-    margin-bottom: 23px;
+    // margin-bottom: 23px;
     font-size: 20px;
     line-height: 30px;
+
     &::before {
       right: 63px;
       top: 13px;
     }
+
     &::after {
       right: 60px;
       top: 8px;
     }
   }
+  @media (min-width:@desktop-width) {
+    margin-top: 25px;
+  }
+
 }
 
-@media (min-width: @tablet-width) and (max-width: @desktop-width) {
+@media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
   .food-programs__item-wrapper {
     display: grid;
     grid-template-columns: 60% 1fr;
@@ -146,19 +191,8 @@
     height: 200px;
   }
 
-  .food-programs__item--pro p {
+  // .food-programs__item--pro p {
 
-    padding-right: 40px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .food-programs__list-wrapper {
-    flex-direction: row;
-  }
-
-  .food-programs__item-image {
-    width: 100px;
-    height: 100px;
-  }
+  //   padding-right: 40px;
+  // }
 }
