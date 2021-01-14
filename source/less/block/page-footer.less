@@ -1,5 +1,4 @@
 .page-footer {
-  position: relative;
 
   &--form,
   &--catalog {
@@ -7,9 +6,17 @@
   }
 }
 
+.page-footer__contacts {
+  position: relative;
+}
+
 .page-footer__map {
   height: 362px;
   background-color: tomato;
+
+  @media (min-width:@tablet-width) {
+    height: 400px;
+  }
 }
 
 .page-footer__wrapper {
@@ -24,6 +31,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    min-height: 150px;
   }
 }
 
@@ -35,7 +43,18 @@
 
 .page-footer__logo {
   align-self: center;
-  min-height: 95px;
+  width: 128px;
+  // height: 24px;
+  min-height: 80px;
+  background-image: url("../../img/footer-logo_2.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width:@tablet-width) {
+    width: 128px;
+    height: 24px;
+    background-image: url("../../img/footer-logo_2.svg");
+  }
 }
 
 .page-footer__copyright {
