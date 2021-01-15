@@ -1,38 +1,90 @@
 .product {
+  // font-weight: normal;
   position: relative;
-  background-color: fade(@basic_green, 85%);
-  color: @basic_white;
-  font-weight: normal;
+
+  @media (max-width:@mobile-width-only) {
+
+    color: @basic_white;
+    min-height: 480px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 63%;
+      width: 100%;
+      z-index: -1;
+      background-color: fade(@basic_green, 85%);
+    }
+  }
 
   @media (min-width:@tablet-width) {
-    background-color: transparent;
+    min-height: 842px;
     color: @basic_black;
   }
 
-}
-@media (min-width: @desktop-width) {
-  .product {
-    height: 696px;
-  }
-  .product::after {
-    content: "";
-    position: absolute;
-    top:-90px;
-    right: 0;
-    height: 100%;
-    width: 50%;
-    z-index: -1;
-    background-color: fade(@basic_green,85%);
+  @media (min-width: @desktop-width) {
+    min-height: 586px;
   }
 }
-// .product__tagline {
-//   font-size: 36px;
-//   line-height: 36px;
-//   font-weight: 400;
-// }
 
-.product__tagline-description {
+.product__wrapper {
+  padding-top: 28px;
+  text-align: center;
+
+  @media (min-width:@tablet-width) {
+    text-align: left;
+    padding: 0 117px;
+    padding-top: 63px;
+  }
+
+  @media (min-width:@desktop-width) {
+    padding-left: 190px;
+    padding-top: 113px;
+    padding-right: 50%;
+  }
+}
+
+.product__description {
+  margin: 0;
+  padding: 0;
+  margin-top: 25px;
+  margin-bottom: 30px;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
+
+  @media (min-width:@tablet-width) {
+    margin-top: 40px;
+    font-size: 20px;
+    line-height: 20px;
+    // position: relative;
+  }
+}
+.product__image {
+  @media (min-width:@desktop-width) {
+   display: none;
+  }
+
+}
+.product__button {
+  margin-top: auto;
+  height: 40px;
+  font-size: 14px;
+
+  @media (min-width:@tablet-width) {
+    position: absolute;
+    top: 290px;
+    left: 110px;
+    width: 245px;
+    height: 55px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  @media (min-width:@desktop-width) {
+    position: static;
+    margin-top: 50px;
+  }
+
 }
