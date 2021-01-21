@@ -24,7 +24,7 @@ fieldset {
   @media (min-width:@desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 100px;
+    gap: 80px;
     box-sizing: border-box;
     width: @desktop-width;
     padding: 0 110px;
@@ -88,6 +88,11 @@ fieldset {
       padding-left: 15px;
     }
   }
+  &--email {
+    @media (min-width:@tablet-width) {
+      padding-left: 22px;
+    }
+  }
 }
 
 .form__input-wrapper {
@@ -135,6 +140,12 @@ fieldset {
       margin-bottom: 33px;
     }
   }
+  @media (min-width:@desktop-width) {
+    &--checkbox {
+      width: 325px;
+      margin-bottom: 0px;
+    }
+  }
 }
 
 .form__properties {
@@ -166,12 +177,11 @@ fieldset {
     // padding: 0;
     margin-top: 50px;
     padding: 25px;
-
     border: 1px solid @border_grey-4;
   }
 
   @media (min-width:@desktop-width) {
-    padding: 0;
+    padding-top: 27px;
     margin: 0;
     border: 1px solid @border_grey-4;
   }
@@ -194,6 +204,9 @@ fieldset {
   @media (min-width:@tablet-width) {
     margin-top: 75px;
   }
+  @media (min-width:@desktop-width) {
+    margin-top: 50px;
+  }
 }
 
 .form__contacts-wrapper {
@@ -201,6 +214,11 @@ fieldset {
 
   @media (min-width:@tablet-width) {
     margin-top: 76px;
+  }
+  @media (min-width:@desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
   }
 }
 
@@ -269,7 +287,10 @@ fieldset {
   @media (min-width:@desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 61px;
+    column-gap: 0px;
+    row-gap: 60px;
+    margin-top: 60px;
+    padding-bottom: 30px;
   }
 }
 
@@ -284,6 +305,9 @@ fieldset {
 
   @media (min-width:@desktop-width) {
     grid-column: 1/ span 2;
+    margin-top: 0;
+    min-height: 55px;
+    width: 568px;
   }
 }
 
@@ -300,6 +324,7 @@ fieldset {
 
   @media (min-width:@desktop-width) {
     grid-column: span 2;
+    margin-top: 20px;
   }
 }
 
